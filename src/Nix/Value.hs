@@ -528,7 +528,7 @@ liftNValue
   => (forall x . u m x -> m x)
   -> NValue t f m
   -> NValue t f (u m)
-liftNValue = (`hoistNValue` lift)
+liftNValue = \x -> hoistNValue x lift
 
 
 -- *** MonadTransUnlift
